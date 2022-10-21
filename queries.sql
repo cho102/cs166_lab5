@@ -1,0 +1,18 @@
+SELECT C.pid 
+FROM CATALOG C
+WHERE C.cost < 10;
+
+SELECT P.pname
+FROM PARTS P, CATALOG C
+WHERE C.cost < 10 AND P.pid = C.pid;
+
+SELECT S.address
+FROM PARTS P, CATALOG C, SUPPLIERS S
+WHERE P.pname = "Fire Hydrant Cap";
+
+SELECT S.sname
+FROM PARTS P, CATALOG C , SUPPLIERS S
+WHERE P.color = "green";
+
+SELECT S.sname, P.pname
+FROM PARTS P, CATALOG C, SUPPLIERS S;
